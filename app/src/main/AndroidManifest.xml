@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.VisaHUB">
         <activity
+            android:name=".DashboardActivity"
+            android:exported="true" />
+        <activity
             android:name=".Otp"
             android:exported="false" />
         <activity
