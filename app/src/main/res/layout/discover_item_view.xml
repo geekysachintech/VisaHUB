@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView android:elevation="80dp"
+    android:outlineAmbientShadowColor="#f9e0d2"
+    android:outlineSpotShadowColor="#f9e0d2"
+    android:layout_width="wrap_content"
+    app:cardCornerRadius="14dp"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="8dp"
+    android:layout_marginVertical="8dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/discover_image_view"
+                android:layout_width="150dp"
+                android:layout_height="250dp"/>
+
+            <TextView
+                android:id="@+id/discover_title_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:layout_gravity="bottom"
+                android:layout_margin="20dp"
+                android:textSize="25sp"
+                android:text="India"/>
+
+        </FrameLayout>
+
+</androidx.cardview.widget.CardView>

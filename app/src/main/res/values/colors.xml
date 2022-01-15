@@ -9,4 +9,6 @@
     <color name="white">#FFFFFFFF</color>
     <color name="app_blue">#20a1c4</color>
     <color name="app_orange">#e56928</color>
+
+    <color name="edit_text_back">#eeeeee</color>
 </resources>

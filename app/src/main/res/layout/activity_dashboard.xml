@@ -6,22 +6,145 @@
     android:layout_height="match_parent"
     tools:context=".DashboardActivity">
 
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/hi_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hi,"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:textColor="@color/app_orange"
+        android:layout_marginStart="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="20dp"/>
+
     <ImageView
         android:id="@+id/profile_pic"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/circle_profile_pic"
+        android:src="@drawable/circle_profile"
         android:layout_marginRight="20dp"
         android:layout_marginTop="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
 
     <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/intro_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Where do \nyou want to go?"
         app:layout_constraintTop_toBottomOf="@+id/profile_pic"
         app:layout_constraintStart_toStartOf="parent"
+        android:textStyle="bold"
+        android:textSize="36sp"
+        android:layout_marginTop="18dp"
+        android:layout_marginStart="20dp"
+        android:textColor="@color/black"/>
+
+<!--    <com.google.android.material.textfield.TextInputLayout-->
+<!--        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginHorizontal="20dp"-->
+<!--        android:background="@drawable/custom_text_input"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/intro_text"-->
+<!--        app:layout_constraintStart_toStartOf="parent">-->
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/from_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="From"
+        android:textColor="#f9e0d2"
+        android:textStyle="bold"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/intro_text"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+        <AutoCompleteTextView
+            android:background="@drawable/custom_text_input"
+            android:id="@+id/from_auto_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="12dp"
+            android:paddingHorizontal="20dp"
+            android:textSize="24sp"
+            android:layout_marginHorizontal="20dp"
+            app:layout_constraintTop_toBottomOf="@+id/from_text_view"
+            android:hint="India" />
+
+    <ImageView
+        android:id="@+id/airplane_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_baseline_airplanemode_active_24"
+        android:rotation="90"
+        app:layout_constraintTop_toBottomOf="@+id/from_auto_text_view"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
         />
 
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/to_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="To"
+        android:textStyle="bold"
+        android:textColor="#f9e0d2"
+        app:layout_constraintTop_toBottomOf="@id/airplane_icon"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginLeft="20dp"/>
+
+    <AutoCompleteTextView
+        android:background="@drawable/custom_text_input"
+        android:id="@+id/to_auto_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="12dp"
+        android:paddingHorizontal="20dp"
+        android:textSize="24sp"
+        android:layout_marginHorizontal="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/to_text_view"
+        android:hint="Dubai" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/search_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="Search"
+        app:layout_constraintTop_toBottomOf="@+id/to_auto_text_view"
+        android:layout_marginHorizontal="22dp"
+        android:textSize="22sp"
+        android:padding="8dp"
+        android:background="@drawable/custom_button"
+        android:layout_marginTop="25dp"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/discover_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Discover"
+        android:textColor="#f9e0d2"
+        android:textStyle="bold"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/search_button"
+        android:layout_marginStart="25dp"
+        android:textSize="25sp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/discover_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/discover_text"
+        android:layout_marginHorizontal="20dp"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+<!--    </com.google.android.material.textfield.TextInputLayout>-->
 </androidx.constraintlayout.widget.ConstraintLayout>
