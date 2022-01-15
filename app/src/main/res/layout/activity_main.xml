@@ -51,7 +51,7 @@
         app:layout_constraintTop_toBottomOf="@id/login_text_view"/>
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/mobile_number"
+        android:id="@+id/phone_edit_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Phone Number"
@@ -64,7 +64,7 @@
         android:layout_marginHorizontal="24dp"/>
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/password_edit_text"
+        android:id="@+id/email_edit_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Email"
@@ -74,7 +74,7 @@
         android:paddingBottom="20dp"
         android:inputType="textEmailAddress"
         android:drawableLeft="@drawable/ic_baseline_alternate_email_24"
-        app:layout_constraintTop_toBottomOf="@+id/mobile_number"/>
+        app:layout_constraintTop_toBottomOf="@+id/phone_edit_text"/>
 
 
     <com.google.android.material.textview.MaterialTextView
@@ -82,7 +82,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="By signing up, you're agree to our Terms and Conditions and Privacy Policy"
-        app:layout_constraintTop_toBottomOf="@id/password_edit_text"
+        app:layout_constraintTop_toBottomOf="@id/email_edit_text"
         android:layout_marginTop="15dp"
         android:includeFontPadding="false"
         android:textAlignment="center"

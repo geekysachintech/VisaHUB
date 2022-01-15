@@ -13,11 +13,14 @@ class DashboardActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dashboard)
         val countries = resources.getStringArray(R.array.countries_array)
+
         search_button.setOnClickListener {
             startActivity(Intent(this, VisaDisplayActivity::class.java))
         }
+
         fromAutoTextView(countries, from_auto_text_view)
         fromAutoTextView(countries, to_auto_text_view)
+
         setupDiscoverAdapter()
     }
 

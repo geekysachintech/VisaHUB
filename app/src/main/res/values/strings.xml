@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">VisaHUB</string>
+<!--    <string name="default_web_client_id">1000867469023-4na0hm951kfgus04l294b1tadklko8pk.apps.googleusercontent.com</string>-->
 
     <string-array name="countries_array">
         <item>Afghanistan</item>

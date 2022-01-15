@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1000867469023",
+    "project_id": "visa-hub",
+    "storage_bucket": "visa-hub.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1000867469023:android:390327c43b3c63eca5bb6a",
+        "android_client_info": {
+          "package_name": "com.example.visahub"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1000867469023-punsm6hvs1m8rjgn2sfr3gtko6aavg16.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.visahub",
+            "certificate_hash": "3cf382e58fbefcefb9eaf4eab5dbdc1e3d6f1540"
+          }
+        },
+        {
+          "client_id": "1000867469023-4na0hm951kfgus04l294b1tadklko8pk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCMJQ6TlTv6UKitX_UspBC0iiJTJwBvL6U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1000867469023-4na0hm951kfgus04l294b1tadklko8pk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
