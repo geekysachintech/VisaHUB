@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.SingupFragment">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="22dp" />
+
+    <ImageView
+        android:id="@+id/intro_vector"
+        android:layout_width="310dp"
+        android:layout_height="250dp"
+        android:src="@drawable/travel_visa"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="22dp"
+        app:layout_constraintStart_toEndOf="@id/guideline_start"
+        app:layout_constraintEnd_toStartOf="@id/guideline_end"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/login_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sign Up"
+        android:includeFontPadding="false"
+        android:textColor="@color/black"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/guideline_start"
+        app:layout_constraintTop_toBottomOf="@id/intro_vector"/>
+
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/name_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Name"
+        android:layout_marginHorizontal="22dp"
+        android:layout_marginTop="16dp"
+        android:inputType="textPersonName"
+        android:drawableLeft="@drawable/ic_baseline_account_box_24"
+        android:drawablePadding="12dp"
+        android:paddingBottom="20dp"
+        app:layout_constraintStart_toEndOf="@+id/guideline_start"
+        app:layout_constraintTop_toBottomOf="@id/login_text_view"/>
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/phone_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Phone Number"
+        android:drawableLeft="@drawable/ic_baseline_smartphone_24"
+        app:layout_constraintTop_toBottomOf="@+id/name_edit_text"
+        android:inputType="number"
+        android:drawablePadding="12dp"
+        android:paddingBottom="20dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginHorizontal="24dp"/>
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/email_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Email"
+        android:layout_marginHorizontal="25dp"
+        android:layout_marginTop="16dp"
+        android:drawablePadding="12dp"
+        android:paddingBottom="20dp"
+        android:inputType="textEmailAddress"
+        android:drawableLeft="@drawable/ic_baseline_alternate_email_24"
+        app:layout_constraintTop_toBottomOf="@+id/phone_edit_text"/>
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/privacy_policy_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="By signing up, you're agree to our Terms and Conditions and Privacy Policy"
+        app:layout_constraintTop_toBottomOf="@id/email_edit_text"
+        android:layout_marginTop="15dp"
+        android:includeFontPadding="false"
+        android:textAlignment="center"
+        android:layout_marginEnd="24dp"
+        android:layout_marginStart="24dp"
+        app:layout_constraintStart_toEndOf="@+id/guideline_start"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/continue_btn"
+        style="@style/MaterialButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Continue"
+        android:textSize="16sp"
+        android:textAllCaps="false"
+        app:layout_constraintTop_toBottomOf="@+id/privacy_policy_text"
+        android:layout_marginHorizontal="22dp"
+        app:layout_constraintStart_toEndOf="@+id/guideline_start"
+        android:layout_marginTop="16dp"/>
+
+    <LinearLayout
+        android:id="@+id/or_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/continue_btn"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        >
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="#808080"
+            android:layout_weight="4"
+            />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OR"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="#808080"
+            android:layout_weight="4"
+            />
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/google_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/or_text"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:text="Login with Google"
+        android:textSize="16sp"
+        android:textAlignment="textStart"
+        android:drawablePadding="58dp"
+        android:textColor="@color/app_orange"
+        android:textAllCaps="false"
+        android:background="@drawable/custom_button"
+        android:backgroundTint="#f9e0d2"
+        android:drawableLeft="@drawable/ic_icons8_google"
+        android:paddingStart="28sp"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/already_register_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:includeFontPadding="false"
+        android:text="Joined us before? Login"
+        android:textAllCaps="false"
+        android:textSize="12sp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/google_btn"
+        android:textAlignment="center"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="22dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Otp">
+    tools:context=".fragment.OtpFragment">
 
 
     <androidx.appcompat.widget.AppCompatTextView
@@ -147,7 +147,7 @@
         />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/login_btn"
+        android:id="@+id/validate_btn"
         style="@style/MaterialButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
