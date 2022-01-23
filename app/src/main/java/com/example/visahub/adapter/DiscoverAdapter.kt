@@ -5,12 +5,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.example.visahub.R
 import com.example.visahub.data.DiscoverFeedData
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.discover_item_view.view.*
 
-class DiscoverAdapter(private val context: Context) : RecyclerView.Adapter<DiscoverAdapter.ViewHolder>() {
+class DiscoverAdapter() : RecyclerView.Adapter<DiscoverAdapter.ViewHolder>() {
 
     private val dummyDataArray: ArrayList<DiscoverFeedData> = arrayListOf(
         DiscoverFeedData(imageUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/India_Gate_at_night_%2C_New_Delhi.jpg/400px-India_Gate_at_night_%2C_New_Delhi.jpg", title = "India"),
@@ -27,12 +28,14 @@ class DiscoverAdapter(private val context: Context) : RecyclerView.Adapter<Disco
     }
 
     override fun onBindViewHolder(holder: DiscoverAdapter.ViewHolder, position: Int) {
-        Picasso.with(context)
+
+        Glide
+            .with(holder.itemView.context)
             .load(dummyDataArray[position].imageUrl)
-            .placeholder(R.drawable.circle_profile) //optional
-            .resize(150, 250)         //optional
-            .centerCrop()                        //optional
-            .into(holder.imageView)
+            .centerCrop()
+            .placeholder(R.drawable.circle_profile)
+            .error(R.drawable.circle_profile)
+            .into(holder.imageView);
 
         holder.textView.text = dummyDataArray[position].title
     }

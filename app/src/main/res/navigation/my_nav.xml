@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/singupFragment"
-        android:name="com.example.visahub.fragment.SingupFragment"
+        android:name="com.example.visahub.ui.fragment.SingupFragment"
         android:label="fragment_s_ingup"
         tools:layout="@layout/fragment_s_ingup" >
         <action
@@ -19,7 +19,7 @@
     </fragment>
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.example.visahub.fragment.LoginFragment"
+        android:name="com.example.visahub.ui.fragment.LoginFragment"
         android:label="fragment_loginfragment"
         tools:layout="@layout/fragment_loginfragment" >
         <action
@@ -31,7 +31,8 @@
     </fragment>
     <fragment
         android:id="@+id/otpFragment"
-        android:name="com.example.visahub.fragment.OtpFragment"
+        android:name="com.example.visahub.ui.fragment.OtpFragment"
         android:label="fragment_otp"
-        tools:layout="@layout/fragment_otp" />
+        tools:layout="@layout/fragment_otp">
+    </fragment>
 </navigation>

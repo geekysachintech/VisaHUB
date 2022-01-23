@@ -3,7 +3,27 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/custom_input.xml" value="0.28675213675213673" />
+        <entry key="app/src/main/res/drawable/custom_text_input.xml" value="0.28675213675213673" />
+        <entry key="app/src/main/res/drawable/dropdown_item.xml" value="0.16111111111111112" />
+        <entry key="app/src/main/res/drawable/ic_baseline_account_circle_24.xml" value="0.28675213675213673" />
+        <entry key="app/src/main/res/drawable/ic_baseline_airplanemode_active_24.xml" value="0.28675213675213673" />
+        <entry key="app/src/main/res/drawable/ic_baseline_arrow_back_24.xml" value="0.28675213675213673" />
+        <entry key="app/src/main/res/drawable/ic_baseline_menu_24.xml" value="0.28675213675213673" />
+        <entry key="app/src/main/res/drawable/ic_calendar_24.xml" value="0.28675213675213673" />
+        <entry key="app/src/main/res/drawable/ic_currency_money.xml" value="0.28675213675213673" />
+        <entry key="app/src/main/res/drawable/ic_location_24.xml" value="0.28675213675213673" />
+        <entry key="app/src/main/res/layout/activity_available_visa.xml" value="0.27350427350427353" />
+        <entry key="app/src/main/res/layout/activity_dashboard.xml" value="0.27350427350427353" />
+        <entry key="app/src/main/res/layout/activity_login.xml" value="0.14786324786324787" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_otp.xml" value="0.27350427350427353" />
+        <entry key="app/src/main/res/layout/discover_item_view.xml" value="0.27350427350427353" />
+        <entry key="app/src/main/res/layout/dropdown_item.xml" value="0.14786324786324787" />
+        <entry key="app/src/main/res/layout/fragment_loginfragment.xml" value="0.27350427350427353" />
+        <entry key="app/src/main/res/layout/fragment_otp.xml" value="0.27350427350427353" />
+        <entry key="app/src/main/res/layout/fragment_s_ingup.xml" value="0.27350427350427353" />
+        <entry key="app/src/main/res/layout/item_available_visa.xml" value="0.27350427350427353" />
       </map>
     </option>
   </component>

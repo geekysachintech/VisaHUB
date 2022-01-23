@@ -3,6 +3,7 @@
     package="com.example.visahub">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
 
     <application
         android:allowBackup="true"
@@ -12,27 +13,26 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.VisaHUB">
         <activity
+            android:name=".ui.AvailableVisaActivity"
+            android:exported="true" />
+        <activity
             android:name=".VisaDisplayActivity"
             android:exported="true" />
         <activity
-            android:name=".DashboardActivity"
+            android:name=".ui.DashboardActivity"
             android:exported="true" />
         <activity
-            android:name=".Login"
+            android:name=".ui.OnboardingActivity"
             android:exported="true">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
         <activity
             android:name=".MainActivity"
-            android:exported="true">
-
-        </activity>
+            android:exported="true"></activity>
     </application>
 
 </manifest>

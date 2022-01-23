@@ -10,10 +10,6 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-        <FrameLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-
             <ImageView
                 android:id="@+id/discover_image_view"
                 android:layout_width="150dp"
@@ -29,7 +25,5 @@
                 android:layout_margin="20dp"
                 android:textSize="25sp"
                 android:text="India"/>
-
-        </FrameLayout>
 
 </androidx.cardview.widget.CardView>
