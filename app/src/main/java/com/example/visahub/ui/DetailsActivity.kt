@@ -29,12 +29,12 @@ class DetailsActivity : AppCompatActivity() {
         qualification_text.text = details.qualificaton.toString().replace("\\n" ,"\n" )
         other_text.text = details.other.toString()
         duration_text.text = details.processingTime.toString()
-        Glide
-            .with(this)
-            .load(details.imageUrl)
-            .centerCrop()
-            .placeholder(R.drawable.circle_profile)
-            .error(R.drawable.circle_profile)
-            .into(image_view);
+//        Glide
+//            .with(this)
+//            .load(details.imageUrl)
+//            .centerCrop()
+//            .placeholder(R.drawable.circle_profile)
+//            .error(R.drawable.circle_profile)
+//            .into(image_view);
     }
 }

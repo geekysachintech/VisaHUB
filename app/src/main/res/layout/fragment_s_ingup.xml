@@ -194,16 +194,15 @@
         android:layout_marginTop="12dp"
         android:layout_marginHorizontal="24dp"
         android:orientation="horizontal"
+        android:gravity="center"
         app:layout_constraintEnd_toEndOf="parent"
-        android:weightSum="2"
         >
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:text="Joined us before?"
             android:textSize="14sp"
-
             android:textAlignment="textEnd"
             android:textColor="@color/black"
             android:layout_weight="1"
@@ -211,7 +210,7 @@
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/already_register_text"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:text="Login"
             android:textSize="16sp"

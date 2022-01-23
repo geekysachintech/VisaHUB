@@ -128,7 +128,9 @@ class LoginFragment : Fragment() {
                 val account = task.getResult(ApiException::class.java) !!
                 if (account != null) {
                     getGoogleAuthCredential(account)
-                    startActivity(Intent(requireActivity(), DashboardActivity::class.java))
+                    startActivity(
+                        Intent(requireContext(), DashboardActivity::class.java))
+                    activity?.finish()
                 }
 
             } catch (e: ApiException) {

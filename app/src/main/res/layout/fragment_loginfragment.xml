@@ -187,7 +187,7 @@
             android:id="@+id/new_user_text"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:text="SingUp"
+            android:text="SignUp"
             android:textSize="16sp"
             android:paddingStart="6dp"
             android:textStyle="bold"
