@@ -1,5 +1,6 @@
 package com.example.visahub.data
 
+import java.io.Serializable
 import java.util.*
 
 data class VisaDetails(
@@ -13,4 +14,4 @@ data class VisaDetails(
     val continent: String ?= null,
     val currency: String ?= null,
     val imageUrl: String ?= null
-)
+) : Serializable

@@ -32,7 +32,7 @@ class AvailableVisaActivity : AppCompatActivity() {
     private fun observingVisaDetailsList(){
         availableVisaViewModel.visaDetailsList.observe(this) {
             Log.d("finalCheck", it.toString())
-            available_visa_recyclerView.adapter = AvailableVisaAdapter(it)
+            available_visa_recyclerView.adapter = AvailableVisaAdapter(this , it)
         }
     }
 }

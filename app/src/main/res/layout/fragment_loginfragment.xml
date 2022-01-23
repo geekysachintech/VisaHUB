@@ -20,6 +20,17 @@
         android:orientation="vertical"
         app:layout_constraintGuide_end="22dp"/>
 
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:visibility="gone"
+        />
+
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/image_view"
         android:layout_width="match_parent"
@@ -131,21 +142,61 @@
         />
 
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/new_user_text"
+<!--    <androidx.appcompat.widget.AppCompatTextView-->
+<!--        android:id="@+id/new_user_text"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="24dp"-->
+<!--        android:layout_marginTop="16dp"-->
+<!--        android:includeFontPadding="false"-->
+<!--        android:text="New to Logistic? Register"-->
+<!--        android:textAllCaps="false"-->
+<!--        android:textSize="14sp"-->
+<!--        android:layout_marginEnd="24dp"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/google_btn"-->
+<!--        android:textAlignment="center"-->
+<!--        />-->
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="16dp"
-        android:includeFontPadding="false"
-        android:text="New to Logistic? Register"
-        android:textAllCaps="false"
-        android:textSize="14sp"
-        android:layout_marginEnd="24dp"
+        android:layout_height="20dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/google_btn"
-        android:textAlignment="center"
-        />
+        android:layout_marginTop="12dp"
+        android:layout_marginHorizontal="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="24dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:weightSum="2"
+        >
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="Joined us before?"
+            android:textSize="14sp"
+            android:textAlignment="textEnd"
+            android:textColor="@color/black"
+            android:layout_weight="1.1"
+            />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/new_user_text"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="SingUp"
+            android:textSize="16sp"
+            android:paddingStart="6dp"
+            android:textStyle="bold"
+            android:textColor="@color/app_orange"
+            android:includeFontPadding="false"
+            android:layout_weight="0.9"
+            />
+
+    </LinearLayout>
 
 
 

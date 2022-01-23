@@ -2,6 +2,7 @@ package com.example.visahub.ui.fragment
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -30,6 +31,8 @@ class OtpFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_otp, container, false)
         authenticationViewModel = ViewModelProvider(this).get(AuthenticationViewModel::class.java)
         user = arguments?.getSerializable("user") as User
+//        Log.d("Mobile" , user.mobileNo.toString())
+        view.mobile_number_text.text = user.mobileNo.toString()
         authenticationViewModel.sendVerificationCode("+91" + user.mobileNo, requireActivity())
         if (user.mobileNo?.isNotEmpty() == true){
             Toasty.success(requireContext(), "Otp has been send to " + user.mobileNo, Toast.LENGTH_SHORT).show()
@@ -70,7 +73,9 @@ class OtpFragment : Fragment() {
                 }
                 is ResponseState.Success -> {
                     Toasty.success(requireContext(), "Sign in successful", Toast.LENGTH_SHORT).show()
-                    startActivity(Intent(activity , DashboardActivity::class.java))
+                    startActivity(Intent(activity , DashboardActivity::class.java)
+                        .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or  Intent.FLAG_ACTIVITY_CLEAR_TASK))
+
                 }
                 is ResponseState.Loading -> {
                 }

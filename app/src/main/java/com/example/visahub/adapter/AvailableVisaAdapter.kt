@@ -1,5 +1,7 @@
 package com.example.visahub.adapter
 
+import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -7,9 +9,10 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.visahub.R
 import com.example.visahub.data.VisaDetails
+import com.example.visahub.ui.DetailsActivity
 import kotlinx.android.synthetic.main.item_available_visa.view.*
 
-class AvailableVisaAdapter(private val visaList: ArrayList<VisaDetails>) : RecyclerView.Adapter<AvailableVisaAdapter.ViewHolder>() {
+class AvailableVisaAdapter(private val context: Context, private val visaList: ArrayList<VisaDetails>) : RecyclerView.Adapter<AvailableVisaAdapter.ViewHolder>() {
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
@@ -36,6 +39,10 @@ class AvailableVisaAdapter(private val visaList: ArrayList<VisaDetails>) : Recyc
         holder.currency.text = currentItem.currency
         holder.validity.text = currentItem.validity
         holder.processing.text = currentItem.processingTime
+        holder.itemCardView.setOnClickListener {
+            context.startActivity(Intent(context , DetailsActivity::class.java)
+                .putExtra("visaDetail" , currentItem))
+        }
     }
 
     override fun getItemCount(): Int {
@@ -43,6 +50,7 @@ class AvailableVisaAdapter(private val visaList: ArrayList<VisaDetails>) : Recyc
     }
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        val itemCardView = itemView.item_card_view
         val visaImage = itemView.visa_image_view
         val visaType = itemView.visa_Type
         val continent = itemView.continent

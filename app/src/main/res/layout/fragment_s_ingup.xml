@@ -13,6 +13,17 @@
         android:orientation="vertical"
         app:layout_constraintGuide_begin="22dp" />
 
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:visibility="gone"
+        />
+
     <ImageView
         android:id="@+id/intro_vector"
         android:layout_width="310dp"
@@ -83,7 +94,8 @@
         android:layout_height="wrap_content"
         android:text="By signing up, you're agree to our Terms and Conditions and Privacy Policy"
         app:layout_constraintTop_toBottomOf="@id/email_edit_text"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="12dp"
+        android:textSize="12sp"
         android:includeFontPadding="false"
         android:textAlignment="center"
         android:layout_marginEnd="24dp"
@@ -158,21 +170,59 @@
         android:paddingStart="28sp"
         />
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/already_register_text"
+<!--    <androidx.appcompat.widget.AppCompatTextView-->
+<!--        android:id="@+id/already_register_text"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="24dp"-->
+<!--        android:layout_marginTop="16dp"-->
+<!--        android:includeFontPadding="false"-->
+<!--        android:text="Joined us before? Login"-->
+<!--        android:textAllCaps="false"-->
+<!--        android:textSize="12sp"-->
+<!--        android:layout_marginEnd="24dp"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/google_btn"-->
+<!--        android:textAlignment="center"-->
+<!--        />-->
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="16dp"
-        android:includeFontPadding="false"
-        android:text="Joined us before? Login"
-        android:textAllCaps="false"
-        android:textSize="12sp"
-        android:layout_marginEnd="24dp"
+        android:layout_height="20dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/google_btn"
-        android:textAlignment="center"
-        />
+        android:layout_marginTop="12dp"
+        android:layout_marginHorizontal="24dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:weightSum="2"
+        >
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="Joined us before?"
+            android:textSize="14sp"
+
+            android:textAlignment="textEnd"
+            android:textColor="@color/black"
+            android:layout_weight="1"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/already_register_text"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="Login"
+            android:textSize="16sp"
+            android:paddingStart="6dp"
+            android:textStyle="bold"
+            android:textColor="@color/app_orange"
+            android:includeFontPadding="false"
+            android:layout_weight="1"
+            />
+
+    </LinearLayout>
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_end"
